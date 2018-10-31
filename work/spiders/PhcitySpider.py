@@ -14,5 +14,5 @@ class PhcityspiderSpider(scrapy.Spider):
 
     def getParam(self,response):
         sel = scrapy.Selector(response)
-        param = response.xpath("//table/tbody/tr/th/span[@class="fn org"]").extract()
+        param = response.xpath('//table/tbody/tr/th/span[@class="fn org"]').extract()
         return PhCityItem(cityName=param)
